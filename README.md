@@ -1,7 +1,5 @@
-=========
  Obfusc8 
 =========
-------------------------------------------------------------
 Implementation of Candidate Indistinguishability Obfuscation
 ------------------------------------------------------------
 
@@ -9,28 +7,26 @@ This project is a preliminary implementation of the Candidate Indistinguishabili
 Each of the steps necessary for the NC_1 candidate is implemented, but not all of them work completely. 
 Especially the implementation of Multilinear Jigsaw Puzzles is still in the early phases of development and not fully functional.
 
-This project was used to generate the data published in 'Idea: Benchmarking Indistinguishability Obfuscation–A Candidate Implementation' (link_).
+This project was used to generate the data published in 'Idea: Benchmarking Indistinguishability Obfuscationâ€“A Candidate Implementation' ([link](http://link.springer.com/chapter/10.1007/978-3-319-15618-7_12)).
 
 [0] S. Garg, C. Gentry, S. Halevi, M. Raykova, A. Sahai, and B. Waters. "Candidate indistinguishability obfuscation and functional encryption for all circuits." In: Foundations of Computer Science (FOCS), 2013 IEEE 54th Annual Symposium on. IEEE. 2013, pp. 40-49.
 
-.. _link: http://link.springer.com/chapter/10.1007/978-3-319-15618-7_12
 
 Installation
 ============
 
-All of the code is written in Python, using the libraries of the mathematical software Sage_ for the more advanced algebraic concepts.
+All of the code is written in Python, using the libraries of the mathematical software [Sage](http://www.sagemath.org/) for the more advanced algebraic concepts.
 Please refer to their website for installation instructions.
 
-The experiments additionally require Guppy_ to be installed in the context of Sage. To do so either execute::
+The experiments additionally require [Guppy](https://pypi.python.org/pypi/guppy/0.1.10) to be installed in the context of Sage. To do so either execute::
 	
 	sage --python -m easy_install guppy
-	
+
 or download and extract the tarball manually and execute::
 
 	sage --python setup.py install
 
-.. _Sage: http://www.sagemath.org/
-.. _Guppy: https://pypi.python.org/pypi/guppy/0.1.10
+
 
 Modules
 =======
@@ -47,12 +43,12 @@ Further documentation can be found in the docstring of each module.
 * rbp[1]: Randomized Branching Programs
 * toposort: external package for topological sorting
 
-.. [1] Requires sage
+[1] Requires sage
 
 Each module can be run as a script by invoking::
 	
 	sage --python -m obfusc8.%modulename%
-	
+
 This will execute some example code showcasing the functionality of the respective module.
 
 Tests
@@ -62,11 +58,11 @@ There are some unittests that aim to ensure the proper functioning of the codeba
 To execute the tests for a specific module run::
 	
 	sage --python -m obfusc8.test.test_%modulename%
-	
+
 To invoke all tests run::
 	
 	sage --python -m obfusc8.test.test_all
-	
+
 Experiments
 ===========
 
@@ -85,7 +81,7 @@ Because of the magnitude of the growth, it is necessary to restrict the benchmar
 Start with::
 	
 	sage --python -m obfusc8.experiments.generationExp %ID%
-	
+
 %ID% can be a number or several numbers separated by a ','. When no ID is present all experiments will be run.
 
 Experiment IDs:
@@ -112,7 +108,7 @@ This experiment requires that the according generation experiments have been run
 Start with::
 	
 	sage --python -m obfusc8.experiments.executionExp %ID%
-	
+
 ID can be a number or several numbers separated by a ','. When no ID is present all experiments will be run.
 
 Experiment IDs:
@@ -136,6 +132,6 @@ Authors
 =======
 
 * Sebastian Banescu
-* Martín Ochoa
+* MartÃ­n Ochoa
 * Nils Kunze
 * Alexander Pretschner
